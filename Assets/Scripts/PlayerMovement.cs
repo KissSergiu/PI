@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]private float jumpForce = 10f;
     [SerializeField] private AudioSource jumpAudio;
     private enum MovementState { idle, running, jumping, falling }
-    // Start is called before the first frame update
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
@@ -22,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
         anim=GetComponent<Animator>();
         coll=GetComponent<BoxCollider2D>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         dirX=Input.GetAxisRaw("Horizontal");

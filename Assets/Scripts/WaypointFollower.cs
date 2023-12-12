@@ -7,7 +7,6 @@ public class WaypointFollower : MonoBehaviour
     [SerializeField] private GameObject[] coordonate; 
     private int pozitie = 0;
     [SerializeField] private float speed = 2f;
-    // Update is called once per frame
     void Update()
     {
         if(Vector2.Distance(coordonate[pozitie].transform.position,transform.position)< .1f)
